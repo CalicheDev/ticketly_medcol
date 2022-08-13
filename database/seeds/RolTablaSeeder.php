@@ -17,8 +17,12 @@ class RolTablaSeeder extends Seeder
         $rols=[
 
             'administrador',
-            'empresa',
-            'empleado'
+            'callcenter',
+            'domiciliario',
+            'facturador',
+            'seguimiento',
+            'supervisor'
+            
 
         ];
 
@@ -30,8 +34,5 @@ class RolTablaSeeder extends Seeder
               
             ]);
         }
-
-        
-
     }
 }

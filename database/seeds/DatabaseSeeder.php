@@ -18,10 +18,7 @@ class DatabaseSeeder extends Seeder
             'usuario',
             'usuario_rol',
             'menu',
-            'menu_rol',
-            'cie10',
-            'paciente',
-            //'cups'
+            'menu_rol'
 
         ]
 
@@ -31,11 +28,11 @@ class DatabaseSeeder extends Seeder
 
             $this->call(RolTablaSeeder::class);
             $this->call(UsuarioAdministradorSeeder::class);
-            $this->call(cie10Seeder::class);
+            /* $this->call(cie10Seeder::class);
             $this->call(cumsSeeder::class);
             $this->call(paisesSeeder::class);
-             //$this->call(PacientesSeeder::class); paisesSeeder_2
-            // $this->call(cupsSeeder::class);
+             $this->call(PacientesSeeder::class); paisesSeeder_2
+             $this->call(cupsSeeder::class); */
     }
 
     protected function truncateTablas(array $tablas){

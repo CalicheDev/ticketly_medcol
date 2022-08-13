@@ -25,11 +25,12 @@ class Paciente extends Model
         'plan',
         'Ocupacion',
         'Poblacion_especial',
-        'pais_id',  
-        'dpto',     
+        'pais_id',
+        'dpto',
         'ciudad',
+        'barrio_id',
         'sexo',
-        'orientacion_sexual',        
+        'orientacion_sexual',
         'eps',
         'numero_afiliacion',
         'operador',
@@ -40,21 +41,30 @@ class Paciente extends Model
         'futuro3',
         'futuro4',
         'observaciones',
-        'estado_solicitud_farma'
-        
+        'estado_solicitud_farma',
+        'usuario_id'
     ];
 
-
-    public function historiap(){
+    public function historiap()
+    {
         return $this->hasMany(Historia::class, 'paciente_id');
     }
 
-    public function citap(){
+    public function citap()
+    {
         return $this->hasMany(Cita::class, 'paciente_id');
     }
 
-    public function paisesp(){
-        return $this->belongsTo(Paises::class, 'pais_id');
+    public function paisesp()
+    {
+        return $this->hasMany(Paises::class, 'pais_id');
     }
-
+    public function barriop()
+    {
+        return $this->hasMany(Barrios::class, 'id_barrio');
+    }
+    public function programapa()
+    {
+        return $this->hasMany(rel_programasvspaciente::class, 'paciente_id');
+    }
 }

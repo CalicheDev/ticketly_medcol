@@ -12,7 +12,7 @@ class PacientesSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    /* public function run()
     {
         DB::table('paciente')->delete();
         $json = File::get('database/data/paciente.json');
@@ -25,5 +25,5 @@ class PacientesSeeder extends Seeder
             
         ));
         }
-    }
+    } */
 }
