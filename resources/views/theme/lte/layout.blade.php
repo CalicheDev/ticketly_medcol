@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>@yield("titulo",'Fidem')</title>
+  <title>@yield("titulo",'SGD')</title>
 
     <!-- Favicons -->
-    <link href="{{asset("assets/img/fidem_icon.jpeg")}}" rel="icon">
-    <link href="{{asset("assets/img/fidem_icon.jpeg")}}" rel="fidem_icon">
+    <link href="{{asset("assets/img/medcol_logo.jpg")}}" rel="icon">
+    <link href="{{asset("assets/img/medcol_logo.jpg")}}" rel="fidem_icon">
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">

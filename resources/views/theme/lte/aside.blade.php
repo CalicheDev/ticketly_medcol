@@ -2,8 +2,8 @@
   <aside class="main-sidebar  sidebar-light-info elevation-4 ">
     <!-- Brand Logo -->
     <a href="#" class="brand-link logo-switch">
-    <img src="{{asset("assets/img/fidem_icon _aside.jpeg")}}" alt="fidem_icon _aside" class="brand-image-xl logo-xs" style="left: 2px">
-    <img src="{{asset("assets/img/fidem_logo_aside.jpeg")}}" alt="fidem_logo_aside" class="brand-image-l logo-xl" style="left: 12px">
+    <img src="{{asset("assets/img/medcol_icon _aside.jpeg")}}" alt="medcol_icon _aside" class="brand-image-xl logo-xs" style="left: 2px">
+    <img src="{{asset("assets/img/medcol_logo_aside.jpeg")}}" alt="medcol_logo_aside" class="brand-image-l logo-xl" style="left: 12px">
     </a>  
     
     <!-- Sidebar -->
@@ -27,7 +27,7 @@
            </div>
           <div class="info">
             <i class="nav-item has-treeview">
-            <H5 alignt="center"> Clinica del dolor</H5>
+            <H5 alignt="center"> Medicamentos para la Salud</H5>
             </i>
          </div>
           </div>

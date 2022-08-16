@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Ips-Fidem | Log in</title>
+  <title>SGD Medcol | Log in</title>
 
     <!-- Favicons -->
-    <link href="{{asset("assets/img/fidem_icon.jpeg")}}" rel="icon">
-    <link href="{{asset("assets/img/fidem_icon.jpeg")}}" rel="fidem_icon">
+    <link href="{{asset("assets/img/medcol_icon.jpeg")}}" rel="icon">
+    <link href="{{asset("assets/img/medcol_icon.jpeg")}}" rel="medcol_icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{asset("assets/$theme/plugins/animate.css/animate.min.css")}}">
@@ -76,8 +76,8 @@
   <div class="card">
     
     <div class="card-body login-card-body">
-        <img src="{{asset("assets/img/fidem_logo.jpeg")}}") alt="User Avatar" class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center img-size-500 mr-12 " >
-       <p class="login-box-msg"> <b>Historias Clinicas</b></p>
+        <img src="{{asset("assets/img/medcol_logo.jpg")}}") alt="User Avatar" class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center img-size-500 mr-12 " >
+       <p class="login-box-msg"> <b>Sistema de Gestión Domicilios</b></p>
        <div class="card"></div><hr />
       <p class="login-box-msg">Inicie Sesion</p>
       @if ($errors->any())
