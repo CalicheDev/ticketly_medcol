@@ -173,12 +173,12 @@ $id= Session()->get('usuario_id');
                       $('#modal-xl').modal('hide');
                       $('#password1').val('');
                       $('#remenber_token1').val('');
-                      Manteliviano.notificaciones('Password actualizado correctamente', 'Sistema Catastro de usuario','success');
+                      Manteliviano.notificaciones('Password actualizado correctamente', 'Sistema de Gestion Domicilios','success');
 
                   }else if(respuesta.mensaje ='ng'){
 
 
-                    Manteliviano.notificaciones('Las contraseñas deben coincidir', 'Sistema Catastro de usuario','error');
+                    Manteliviano.notificaciones('Las contraseñas deben coincidir', 'Sistema de Gestion Domicilios','error');
                   }
                   }
                    });

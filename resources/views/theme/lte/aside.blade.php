@@ -27,7 +27,7 @@
            </div>
           <div class="info">
             <i class="nav-item has-treeview">
-            <H5 alignt="center"> Medicamentos para la Salud</H5>
+            <H5 alignt="center"> Medicamentos </H5>
             </i>
          </div>
           </div>

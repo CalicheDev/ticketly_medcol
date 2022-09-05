@@ -11,7 +11,6 @@ $id= Session()->get('usuario_id');
   <li class="nav-item">
     <button class="btn btn-primary" data-widget="pushmenu"><i class="fas fa-bars"></i></button>
   </li>
-  
 </ul>
 
  <!-- SEARCH FORM -->
