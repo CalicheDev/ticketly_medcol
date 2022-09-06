@@ -14,7 +14,11 @@ class CreateMovRadicadosAtencionsTable extends Migration
     public function up()
     {
         Schema::create('mov__radicados_atencions', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_atencion');
+            $table->string('observaciones',250)->nullable();
+            $table->unsignedBigInteger('radicado_id');
+            $table->string('estado_radi',100)->nullable();
+            $table->foreign('radicado_id', 'fk_atencion_radicado')->references('id_radicado')->on('mov__radicados')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

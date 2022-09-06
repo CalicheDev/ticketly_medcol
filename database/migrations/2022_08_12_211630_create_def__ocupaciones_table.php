@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDefBarriosTable extends Migration
+class CreateDefOcupacionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDefBarriosTable extends Migration
      */
     public function up()
     {
-        Schema::create('def__barrios', function (Blueprint $table) {
-            $table->id();
+        Schema::create('def__ocupaciones', function (Blueprint $table) {
+            $table->bigIncrements('id_ocupacion');
+            $table->string('codigo',10)->unique();
+            $table->string('nombre',250);
+            $table->char('estado',1);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateDefBarriosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('def__barrios');
+        Schema::dropIfExists('def__ocupaciones');
     }
 }

@@ -14,7 +14,9 @@ class CreateDefCategoriasTable extends Migration
     public function up()
     {
         Schema::create('def__categorias', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_categoria');
+            $table->string('descripcion',200);
+            $table->char('estado',1);
             $table->timestamps();
         });
     }

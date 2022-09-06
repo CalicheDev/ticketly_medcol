@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDefDepartamentosTable extends Migration
+class CreateDefPaisesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDefDepartamentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('def__departamentos', function (Blueprint $table) {
-            $table->id();
+        Schema::create('def__paises', function (Blueprint $table) {
+            $table->bigIncrements('id_pais');
+            $table->string('cod_pais',10)->unique();
+            $table->string('nombre',150);
+            $table->char('estado',1);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateDefDepartamentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('def__departamentos');
+        Schema::dropIfExists('def__paises');
     }
 }

@@ -14,7 +14,10 @@ class CreateDefProyectosTable extends Migration
     public function up()
     {
         Schema::create('def__proyectos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_proyecto');
+            $table->string('codigo',10);
+            $table->string('descripcion',200);
+            $table->char('estado',1);
             $table->timestamps();
         });
     }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\def__estados_entrega;
+use App\Models\Admin\def__estados_entrega;
 use Illuminate\Http\Request;
 
 class DefEstadosEntregaController extends Controller
@@ -41,7 +41,7 @@ class DefEstadosEntregaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\def__estados_entrega  $def__estados_entrega
+     * @param  \App\Models\Admin\def__estados_entrega  $def__estados_entrega
      * @return \Illuminate\Http\Response
      */
     public function show(def__estados_entrega $def__estados_entrega)
@@ -52,7 +52,7 @@ class DefEstadosEntregaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\def__estados_entrega  $def__estados_entrega
+     * @param  \App\Models\Admin\def__estados_entrega  $def__estados_entrega
      * @return \Illuminate\Http\Response
      */
     public function edit(def__estados_entrega $def__estados_entrega)
@@ -64,7 +64,7 @@ class DefEstadosEntregaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\def__estados_entrega  $def__estados_entrega
+     * @param  \App\Models\Admin\def__estados_entrega  $def__estados_entrega
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, def__estados_entrega $def__estados_entrega)
@@ -75,7 +75,7 @@ class DefEstadosEntregaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\def__estados_entrega  $def__estados_entrega
+     * @param  \App\Models\Admin\def__estados_entrega  $def__estados_entrega
      * @return \Illuminate\Http\Response
      */
     public function destroy(def__estados_entrega $def__estados_entrega)

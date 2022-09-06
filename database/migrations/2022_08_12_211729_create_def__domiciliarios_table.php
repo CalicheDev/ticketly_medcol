@@ -14,7 +14,13 @@ class CreateDefDomiciliariosTable extends Migration
     public function up()
     {
         Schema::create('def__domiciliarios', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_domi');
+            $table->string('cargo',10);
+            $table->string('nombres',200);
+            $table->string('apellidos',200);
+            $table->string('telefono',20);
+            $table->string('direccion',200);
+            $table->char('estado',1);
             $table->timestamps();
         });
     }

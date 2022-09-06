@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\def__domiciliarios;
+use App\Models\Admin\def__domiciliarios;
 use Illuminate\Http\Request;
 
 class DefDomiciliariosController extends Controller
@@ -41,7 +41,7 @@ class DefDomiciliariosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\def__domiciliarios  $def__domiciliarios
+     * @param  \App\Models\Admin\def__domiciliarios  $def__domiciliarios
      * @return \Illuminate\Http\Response
      */
     public function show(def__domiciliarios $def__domiciliarios)
@@ -52,7 +52,7 @@ class DefDomiciliariosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\def__domiciliarios  $def__domiciliarios
+     * @param  \App\Models\Admin\def__domiciliarios  $def__domiciliarios
      * @return \Illuminate\Http\Response
      */
     public function edit(def__domiciliarios $def__domiciliarios)
@@ -64,7 +64,7 @@ class DefDomiciliariosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\def__domiciliarios  $def__domiciliarios
+     * @param  \App\Models\Admin\def__domiciliarios  $def__domiciliarios
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, def__domiciliarios $def__domiciliarios)
@@ -75,7 +75,7 @@ class DefDomiciliariosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\def__domiciliarios  $def__domiciliarios
+     * @param  \App\Models\Admin\def__domiciliarios  $def__domiciliarios
      * @return \Illuminate\Http\Response
      */
     public function destroy(def__domiciliarios $def__domiciliarios)

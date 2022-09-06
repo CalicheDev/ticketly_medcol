@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class def__prioridad extends Model
 {
-    use HasFactory;
+    protected $table = 'def__prioridads';
+    protected $primary_key = 'id_prioridad';
+    
+    protected $fillable = [
+
+        'codigo',
+        'descripcion',
+        'estado'
+    ];
 }

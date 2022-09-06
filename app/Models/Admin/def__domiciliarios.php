@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class def__domiciliarios extends Model
 {
-    use HasFactory;
+    protected $table = 'def__domiciliarios';
+    protected $primary_key = 'id_domi';
+    
+    protected $fillable = [
+
+        'cargo',
+        'nombres',
+        'apellidos',
+        'telefono',
+        'direccion',
+        'estado'
+    ];
 }

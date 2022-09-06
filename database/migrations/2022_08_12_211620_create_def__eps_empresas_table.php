@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDefEstadosEntregasTable extends Migration
+class CreateDefEpsEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateDefEstadosEntregasTable extends Migration
      */
     public function up()
     {
-        Schema::create('def__estados_entregas', function (Blueprint $table) {
-            $table->bigIncrements('id_estado');
-            $table->string('codigo',10);
-            $table->string('descripcion',200);
+        Schema::create('def__eps_empresas', function (Blueprint $table) {
+            $table->bigIncrements('id_eps_empresas');
+            $table->string('codigo',45)->unique();
+            $table->string('nombre',255);
+            $table->string('NIT',50); 
+            $table->string('color',100)->nullable();
             $table->char('estado',1);
             $table->timestamps();
         });
@@ -29,6 +31,6 @@ class CreateDefEstadosEntregasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('def__estados_entregas');
+        Schema::dropIfExists('def__eps_empresas');
     }
 }

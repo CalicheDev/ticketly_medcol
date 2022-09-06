@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\mov__radicados_atencion;
+use App\Models\Admin\mov__radicados_atencion;
 use Illuminate\Http\Request;
 
 class MovRadicadosAtencionController extends Controller
@@ -41,7 +41,7 @@ class MovRadicadosAtencionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\mov__radicados_atencion  $mov__radicados_atencion
+     * @param  \App\Models\Admin\mov__radicados_atencion  $mov__radicados_atencion
      * @return \Illuminate\Http\Response
      */
     public function show(mov__radicados_atencion $mov__radicados_atencion)
@@ -52,7 +52,7 @@ class MovRadicadosAtencionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\mov__radicados_atencion  $mov__radicados_atencion
+     * @param  \App\Models\Admin\mov__radicados_atencion  $mov__radicados_atencion
      * @return \Illuminate\Http\Response
      */
     public function edit(mov__radicados_atencion $mov__radicados_atencion)
@@ -64,7 +64,7 @@ class MovRadicadosAtencionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\mov__radicados_atencion  $mov__radicados_atencion
+     * @param  \App\Models\Admin\mov__radicados_atencion  $mov__radicados_atencion
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, mov__radicados_atencion $mov__radicados_atencion)
@@ -75,7 +75,7 @@ class MovRadicadosAtencionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\mov__radicados_atencion  $mov__radicados_atencion
+     * @param  \App\Models\Admin\mov__radicados_atencion  $mov__radicados_atencion
      * @return \Illuminate\Http\Response
      */
     public function destroy(mov__radicados_atencion $mov__radicados_atencion)

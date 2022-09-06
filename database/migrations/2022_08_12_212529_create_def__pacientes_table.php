@@ -49,12 +49,12 @@ class CreateDefPacientesTable extends Migration
             $table->string('futuro4', 100)->nullable();
             $table->string('observaciones', 200)->nullable();
             $table->char('estado_eps',1);
-            $table->foreign('pais_id', 'fk_paciente_paises')->references('id_pais')->on('paises')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('departamento_id', 'fk_paciente_departamento')->references('id_departamento')->on('departamentos')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('ciudad_id','fk_paciente_ciudad')->references('id_ciudad')->on('ciudades')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('barrio_id','fk_paciente_barrio')->references('id_barrio')->on('barrios')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('ocupacion_id','fk_paciente_ocupacion')->references('id_ocupacion')->on('ocupaciones')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('eps_id','fk_paciente_eps_empresa')->references('id_eps_empresas')->on('eps_empresas')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('pais_id', 'fk_paciente_paises')->references('id_pais')->on('def__paises')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('departamento_id', 'fk_paciente_departamento')->references('id_departamento')->on('def__departamentos')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('ciudad_id','fk_paciente_ciudad')->references('id_ciudad')->on('def__ciudades')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('barrio_id','fk_paciente_barrio')->references('id_barrio')->on('def__barrios')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('ocupacion_id','fk_paciente_ocupacion')->references('id_ocupacion')->on('def__ocupaciones')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('eps_id','fk_paciente_eps_empresa')->references('id_eps_empresas')->on('def__eps_empresas')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

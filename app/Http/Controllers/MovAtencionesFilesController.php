@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\mov__atenciones_files;
+use App\Models\Admin\mov__atenciones_files;
 use Illuminate\Http\Request;
 
 class MovAtencionesFilesController extends Controller
@@ -41,7 +41,7 @@ class MovAtencionesFilesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\mov__atenciones_files  $mov__atenciones_files
+     * @param  \App\Models\Admin\mov__atenciones_files  $mov__atenciones_files
      * @return \Illuminate\Http\Response
      */
     public function show(mov__atenciones_files $mov__atenciones_files)
@@ -52,7 +52,7 @@ class MovAtencionesFilesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\mov__atenciones_files  $mov__atenciones_files
+     * @param  \App\Models\Admin\mov__atenciones_files  $mov__atenciones_files
      * @return \Illuminate\Http\Response
      */
     public function edit(mov__atenciones_files $mov__atenciones_files)
@@ -64,7 +64,7 @@ class MovAtencionesFilesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\mov__atenciones_files  $mov__atenciones_files
+     * @param  \App\Models\Admin\mov__atenciones_files  $mov__atenciones_files
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, mov__atenciones_files $mov__atenciones_files)
@@ -75,7 +75,7 @@ class MovAtencionesFilesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\mov__atenciones_files  $mov__atenciones_files
+     * @param  \App\Models\Admin\mov__atenciones_files  $mov__atenciones_files
      * @return \Illuminate\Http\Response
      */
     public function destroy(mov__atenciones_files $mov__atenciones_files)

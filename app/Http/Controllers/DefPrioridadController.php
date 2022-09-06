@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\def__prioridad;
+use App\Models\Admin\def__prioridad;
 use Illuminate\Http\Request;
 
 class DefPrioridadController extends Controller
@@ -41,7 +41,7 @@ class DefPrioridadController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\def__prioridad  $def__prioridad
+     * @param  \App\Models\Admin\def__prioridad  $def__prioridad
      * @return \Illuminate\Http\Response
      */
     public function show(def__prioridad $def__prioridad)
@@ -52,7 +52,7 @@ class DefPrioridadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\def__prioridad  $def__prioridad
+     * @param  \App\Models\Admin\def__prioridad  $def__prioridad
      * @return \Illuminate\Http\Response
      */
     public function edit(def__prioridad $def__prioridad)
@@ -64,7 +64,7 @@ class DefPrioridadController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\def__prioridad  $def__prioridad
+     * @param  \App\Models\Admin\def__prioridad  $def__prioridad
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, def__prioridad $def__prioridad)
@@ -75,7 +75,7 @@ class DefPrioridadController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\def__prioridad  $def__prioridad
+     * @param  \App\Models\Admin\def__prioridad  $def__prioridad
      * @return \Illuminate\Http\Response
      */
     public function destroy(def__prioridad $def__prioridad)

@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class def__causas_devoluciones extends Model
 {
-    use HasFactory;
+    protected $table = 'def__causas_devoluciones';
+    protected $primary_key = 'id_devolucion';
+    
+    protected $fillable = [
+
+        'codigo',
+        'descripcion',
+        'estado'
+    ];
 }

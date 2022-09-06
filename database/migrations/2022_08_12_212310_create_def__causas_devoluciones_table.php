@@ -14,7 +14,10 @@ class CreateDefCausasDevolucionesTable extends Migration
     public function up()
     {
         Schema::create('def__causas_devoluciones', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_devolucion');
+            $table->string('codigo',10);
+            $table->string('descripcion',200);
+            $table->char('estado',1);
             $table->timestamps();
         });
     }

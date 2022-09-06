@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\def__pacientes;
+use App\Models\Admin\def__pacientes;
 use Illuminate\Http\Request;
 
 class DefPacientesController extends Controller
@@ -41,7 +41,7 @@ class DefPacientesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\def__pacientes  $def__pacientes
+     * @param  \App\Models\Admin\def__pacientes  $def__pacientes
      * @return \Illuminate\Http\Response
      */
     public function show(def__pacientes $def__pacientes)
@@ -52,7 +52,7 @@ class DefPacientesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\def__pacientes  $def__pacientes
+     * @param  \App\Models\Admin\def__pacientes  $def__pacientes
      * @return \Illuminate\Http\Response
      */
     public function edit(def__pacientes $def__pacientes)
@@ -64,7 +64,7 @@ class DefPacientesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\def__pacientes  $def__pacientes
+     * @param  \App\Models\Admin\def__pacientes  $def__pacientes
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, def__pacientes $def__pacientes)
@@ -75,7 +75,7 @@ class DefPacientesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\def__pacientes  $def__pacientes
+     * @param  \App\Models\Admin\def__pacientes  $def__pacientes
      * @return \Illuminate\Http\Response
      */
     public function destroy(def__pacientes $def__pacientes)

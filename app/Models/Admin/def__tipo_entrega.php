@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class def__tipo_entrega extends Model
 {
-    use HasFactory;
+    protected $table = 'def__tipo_entrega';
+    protected $primary_key = 'id_entrega';
+
+    protected $fillable = [
+
+        'codigo',
+        'descripcion',
+        'estado'
+    ];
 }

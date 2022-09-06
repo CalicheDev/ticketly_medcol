@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class def__categorias extends Model
 {
-    use HasFactory;
+    protected $table = 'def__categorias';
+    protected $primary_key = 'id_categoria';
+    
+    protected $fillable = [
+
+        'descripcion',
+        'estado'
+    ];
 }

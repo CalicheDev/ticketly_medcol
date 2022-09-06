@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\def__causas_devoluciones;
+use App\Models\Admin\def__causas_devoluciones;
 use Illuminate\Http\Request;
 
 class DefCausasDevolucionesController extends Controller
@@ -41,7 +41,7 @@ class DefCausasDevolucionesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\def__causas_devoluciones  $def__causas_devoluciones
+     * @param  \App\Models\Admin\def__causas_devoluciones  $def__causas_devoluciones
      * @return \Illuminate\Http\Response
      */
     public function show(def__causas_devoluciones $def__causas_devoluciones)
@@ -52,7 +52,7 @@ class DefCausasDevolucionesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\def__causas_devoluciones  $def__causas_devoluciones
+     * @param  \App\Models\Admin\def__causas_devoluciones  $def__causas_devoluciones
      * @return \Illuminate\Http\Response
      */
     public function edit(def__causas_devoluciones $def__causas_devoluciones)
@@ -64,7 +64,7 @@ class DefCausasDevolucionesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\def__causas_devoluciones  $def__causas_devoluciones
+     * @param  \App\Models\Admin\def__causas_devoluciones  $def__causas_devoluciones
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, def__causas_devoluciones $def__causas_devoluciones)
@@ -75,7 +75,7 @@ class DefCausasDevolucionesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\def__causas_devoluciones  $def__causas_devoluciones
+     * @param  \App\Models\Admin\def__causas_devoluciones  $def__causas_devoluciones
      * @return \Illuminate\Http\Response
      */
     public function destroy(def__causas_devoluciones $def__causas_devoluciones)

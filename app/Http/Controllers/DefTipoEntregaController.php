@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\def__tipo_entrega;
+use App\Models\Admin\def__tipo_entrega;
 use Illuminate\Http\Request;
 
 class DefTipoEntregaController extends Controller
@@ -41,7 +41,7 @@ class DefTipoEntregaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\def__tipo_entrega  $def__tipo_entrega
+     * @param  \App\Models\Admin\def__tipo_entrega  $def__tipo_entrega
      * @return \Illuminate\Http\Response
      */
     public function show(def__tipo_entrega $def__tipo_entrega)
@@ -52,7 +52,7 @@ class DefTipoEntregaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\def__tipo_entrega  $def__tipo_entrega
+     * @param  \App\Models\Admin\def__tipo_entrega  $def__tipo_entrega
      * @return \Illuminate\Http\Response
      */
     public function edit(def__tipo_entrega $def__tipo_entrega)
@@ -64,7 +64,7 @@ class DefTipoEntregaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\def__tipo_entrega  $def__tipo_entrega
+     * @param  \App\Models\Admin\def__tipo_entrega  $def__tipo_entrega
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, def__tipo_entrega $def__tipo_entrega)
@@ -75,7 +75,7 @@ class DefTipoEntregaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\def__tipo_entrega  $def__tipo_entrega
+     * @param  \App\Models\Admin\def__tipo_entrega  $def__tipo_entrega
      * @return \Illuminate\Http\Response
      */
     public function destroy(def__tipo_entrega $def__tipo_entrega)

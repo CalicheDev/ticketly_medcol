@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class def__proyectos extends Model
 {
-    use HasFactory;
+    protected $table = 'def__proyectos';
+    protected $primary_key = 'id_proyecto';
+
+    protected $fillable = [
+
+        'codigo',
+        'descripcion',
+        'estado'
+    ];
 }

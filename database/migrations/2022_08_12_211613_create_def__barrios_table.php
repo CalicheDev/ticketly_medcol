@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDefEpsEmpresasTable extends Migration
+class CreateDefBarriosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDefEpsEmpresasTable extends Migration
      */
     public function up()
     {
-        Schema::create('def__eps_empresas', function (Blueprint $table) {
-            $table->id();
+        Schema::create('def__barrios', function (Blueprint $table) {
+            $table->bigIncrements('id_barrio');
+            $table->string('cod_barrio',10)->unique();
+            $table->string('nombre',200);
+            $table->char('estado',1);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateDefEpsEmpresasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('def__eps_empresas');
+        Schema::dropIfExists('def__barrios');
     }
 }
