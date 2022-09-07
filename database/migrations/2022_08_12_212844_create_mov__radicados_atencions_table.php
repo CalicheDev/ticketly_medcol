@@ -17,8 +17,10 @@ class CreateMovRadicadosAtencionsTable extends Migration
             $table->bigIncrements('id_atencion');
             $table->string('observaciones',250)->nullable();
             $table->unsignedBigInteger('radicado_id');
+            $table->unsignedBigInteger('devolucion_id',100)->nullable(); //Este dato se diligencia solo cuando el paquete no se logro entregar
             $table->string('estado_radi',100)->nullable();
             $table->foreign('radicado_id', 'fk_atencion_radicado')->references('id_radicado')->on('mov__radicados')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('devolucion_id', 'fk_atencion_radicado')->references('id_devolucion')->on('def__causas_devoluciones')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

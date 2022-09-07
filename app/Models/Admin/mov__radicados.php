@@ -15,6 +15,7 @@ class mov__radicados extends Model
         'cod_radi',
         'fecha_radi',
         'observaciones',
+        'domiciliario_id',
         'paciente_id',
         'papellido',
         'sapellido',

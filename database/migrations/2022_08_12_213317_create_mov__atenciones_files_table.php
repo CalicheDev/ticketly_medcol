@@ -14,7 +14,10 @@ class CreateMovAtencionesFilesTable extends Migration
     public function up()
     {
         Schema::create('mov__atenciones_files', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_aten_file');
+            $table->unsignedBigInteger('atencion_id');
+            $table->string('files_atencion_name',255)->nullable();
+            $table->foreign('atencion_id','fk_atencion_file')->references('id_atencion')->on('mov__radicados_atencions')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

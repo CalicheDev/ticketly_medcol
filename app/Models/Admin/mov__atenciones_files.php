@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class mov__atenciones_files extends Model
 {
-    use HasFactory;
+    protected $table = 'mov__atenciones_files';
+    protected $primary_key = 'id_aten_file';
+
+    protected $fillable = [
+
+        'atencion_id',
+        'files_atencion_name'
+    ];
 }

@@ -14,7 +14,10 @@ class CreateMovRadicadosFilesTable extends Migration
     public function up()
     {
         Schema::create('mov__radicados_files', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_radi_file');
+            $table->unsignedBigInteger('radicado_id');
+            $table->string('files_radicado_name',255)->nullable();
+            $table->foreign('radicado_id','fk_radi_file')->references('id_radicado')->on('mov__radicados')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

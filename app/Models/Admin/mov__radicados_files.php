@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class mov__radicados_files extends Model
 {
-    use HasFactory;
+    protected $table = 'mov__radicados_files';
+    protected $primary_key = 'id_radi_file';
+
+    protected $fillable = [
+
+        'radicado_id',
+        'files_radicado_name'
+    ];
 }
