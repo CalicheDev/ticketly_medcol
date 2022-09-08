@@ -12,9 +12,26 @@ class MovRadicadosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $usuario_id = $request->session()->get('usuario_id');
+        if ($request->ajax()) {
+            $datas = mov__radicados::orderBy('id_radicado')
+                ->get();
+
+
+            return  DataTables()->of($datas)
+                ->addColumn('action', function ($datas) {
+                    $button = '<button type="button" name="edit" id="' . $datas->id_radicado . '"
+        class = "edit btn-float  bg-gradient-primary btn-sm tooltipsC"  title="Editar paciente"><i class="far fa-edit"></i></button>';
+
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('admin.2-radicados.radicacion.index');
     }
 
     /**

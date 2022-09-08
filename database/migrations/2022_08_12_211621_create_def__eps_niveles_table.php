@@ -25,7 +25,7 @@ class CreateDefEpsNivelesTable extends Migration
             $table->unsignedBigInteger('servicio_id')->nullable();
             $table->string('vlr_copago',255)->nullable();
             $table->char('estado',1);
-            $table->foreign('eps_empresas_id', 'fk_niveles_empresas')->references('id_eps_empresas')->on('eps_empresas')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('eps_empresas_id', 'fk_niveles_empresas')->references('id_eps_empresas')->on('def__eps_empresas')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

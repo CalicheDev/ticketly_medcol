@@ -101,16 +101,8 @@ Route::get('informes', 'AdminController@informes')->name('informes')->middleware
 
 
 
- //RUTA PARA CREAR MEDICAMENTOS
-Route::get('medicamentos', 'DefMedicamentosSuministrosController@index')->name('medicamentosIndex')->middleware('superEditor');
-Route::get('medicamentos/crear', 'DefMedicamentosSuministrosController@crear')->name('crear_medicamentos')->middleware('superEditor');
-Route::post('medicamentos', 'DefMedicamentosSuministrosController@guardar')->name('guardar_medicamentos')->middleware('superEditor');
-Route::get('editar_medicamentos/{id}', 'DefMedicamentosSuministrosController@editar')->name('editar_medicamentos')->middleware('superEditor');
-Route::put('medicamentos/{id}', 'DefMedicamentosSuministrosController@actualizar')->name('actualizar_medicamentos')->middleware('superEditor');
-Route::post('medicamento-estado', 'DefMedicamentosSuministrosController@updateestado')->name('med_estado')->middleware('superEditor');
 
-
-//RUTA PARA CREAR PROFESIONALES
+ //RUTA PARA CREAR PROFESIONALES
 Route::get('profesionales', 'DefProfesionalesController@index')->name('profesionalesIndex')->middleware('superEditor');
 Route::get('profesionales/crear', 'DefProfesionalesController@crear')->name('crear_profesionales')->middleware('superEditor');
 Route::post('profesionales', 'DefProfesionalesController@guardar')->name('guardar_profesionales')->middleware('superEditor');
@@ -118,43 +110,7 @@ Route::get('editar_profesionales/{id}', 'DefProfesionalesController@editar')->na
 Route::put('profesionales/{id}', 'DefProfesionalesController@actualizar')->name('actualizar_profesionales')->middleware('superEditor');
 Route::post('profesional-estado', 'DefProfesionalesController@updateestado')->name('profe_estado')->middleware('superEditor');
 
-//Ruta para consultar las relaciones de Profesional vs Servicio
-Route::get('relserviciovsprofesional', 'RelProfesionalvsservicioController@index')->name('relserviciovsprofesional')->middleware('superEditor');
-Route::delete('serviciovsprofesional/{id}', 'RelProfesionalvsservicioController@eliminar')->name('eliminar_servicios')->middleware('superEditor');
 
-//Ruta para consultar las relaciones de Profesional vs Procedimientos
-Route::get('procedimientovsprofesional', 'RelProfesionalvsprocedimientosController@indexProfe')->name('procedimientovsprofesional')->middleware('superEditor');
-Route::get('relproceIndex', 'DefProcedimientosController@rel_index')->name('relproceIndex')->middleware('superEditor');
-
-//Ruta para consultar las relaciones de Profesional vs Medicamento
-Route::get('profesionalvsmedicamento', 'RelProfesionalvsmedicamentosController@index')->name('profesionalvsmedicamento')->middleware('superEditor');
-Route::delete('medicamentovsprofesional/{id}', 'RelProfesionalvsmedicamentosController@eliminar')->name('eliminar_medicamentos')->middleware('superEditor');
-Route::get('relmedicamentoIndex', 'DefMedicamentosSuministrosController@rel_index')->name('relmedicamentoIndex')->middleware('superEditor');
-
-//RUTA PARA CREAR CONTRATOS
-Route::get('contratos', 'DefContratosController@index')->name('contratosIndex')->middleware('superEditor');
-Route::get('contratos/crear', 'DefContratosController@crear')->name('crear_contratos')->middleware('superEditor');
-Route::post('contratos', 'DefContratosController@guardar')->name('guardar_contratos')->middleware('superEditor');
-Route::get('editar_contratos/{id}', 'DefContratosController@editar')->name('editar_contratos')->middleware('superEditor');
-Route::put('contratos/{id}', 'DefContratosController@actualizar')->name('actualizar_contratos')->middleware('superEditor');
-Route::post('contrato-estado', 'DefContratosController@updateestado')->name('contrato-estado')->middleware('superEditor');
-
-//Ruta para consultar las relaciones de Contrato vs EPS
-Route::get('contratovsEPS', 'RelContratovsepsController@index')->name('contratovsEPS')->middleware('superEditor');
-Route::get('RelEpsIndex', 'EpsController@rel_index')->name('RelEpsIndex')->middleware('superEditor');
-Route::delete('contratovsEPS/{id}', 'RelContratovsepsController@eliminar')->name('eliminar_conteps')->middleware('superEditor');
-
-//Ruta para consultar las relaciones de Contrato vs Servicio
-Route::get('relserviciovsContrato', 'RelContratovsservicioController@index')->name('relserviciovsContrato')->middleware('superEditor');
-Route::delete('serviciovscontrato/{id}', 'RelContratovsservicioController@eliminar')->name('eliminar_relservicio')->middleware('superEditor');
-Route::get('relservicioIndex', 'ServiciosController@rel_index')->name('relservicioIndex')->middleware('superEditor');
-
-//Ruta para consultar las relaciones de Contrato vs Medicamento
-Route::get('contrato-medicamento', 'RelContratovsmedicamentosController@index')->name('contrato-medicamento')->middleware('superEditor');
-Route::delete('contratovsmedicamento/{id}', 'RelContratovsmedicamentosController@eliminar')->name('eliminar_relmedicamento')->middleware('superEditor');
-
-//Ruta para consultar las relaciones de Contrato vs Procedimientos
-Route::get('contrato-procedimiento', 'RelContratovsprocedimientosController@indexProce')->name('contrato-procedimiento')->middleware('superEditor');
 
 
 /* RUTAS DEL USUARIO */
@@ -189,56 +145,15 @@ Route::post('servicios', 'ServiciosController@guardar')->name('guardar_servicio'
 Route::get('servicios/{id}/editar', 'ServiciosController@editar')->name('editar_servicio')->middleware('superEditor');
 Route::put('servicios/{id}', 'ServiciosController@actualizar')->name('actualizar_servicio')->middleware('superEditor');
 
-/* RUTAS DE DOCUMENTOS FINANCIEROS */
-Route::get('documento_financiero', 'DefDocumentosController@index')->name('documento_financiero')->middleware('superEditor');
-Route::get('documento_financiero/crear', 'DefDocumentosController@crear')->name('crear_doc_fin')->middleware('superEditor');
-Route::post('documento_financiero', 'DefDocumentosController@guardar')->name('guardar_doc_fin')->middleware('superEditor');
-Route::get('documento_financiero/{id}/editar', 'DefDocumentosController@editar')->name('editar_doc_fin')->middleware('superEditor');
-Route::put('documento_financiero/{id}', 'DefDocumentosController@actualizar')->name('actualizar_doc_fin')->middleware('superEditor');
-Route::post('documento_fin_estado', 'DefDocumentosController@updateestado')->name('documento_fin_estado')->middleware('superEditor');
+/* RUTAS RADICADOS */
+Route::get('radicados', 'MovRadicadosController@index')->name('radicados')->middleware('superEditor');
+Route::get('radicados/crear', 'MovRadicadosController@crear')->name('crear_radicado')->middleware('superEditor');
+Route::post('radicados', 'MovRadicadosController@guardar')->name('guardar_radicado')->middleware('superEditor');
+Route::get('radicados/{id}/editar', 'MovRadicadosController@editar')->name('editar_radicado')->middleware('superEditor');
+Route::put('radicados/{id}', 'MovRadicadosController@actualizar')->name('actualizar_radicado')->middleware('superEditor');
+Route::get('pacientefact', 'MovRadicadosController@selectpa')->name('pacientefact')->middleware('superEditor');
+Route::get('pacientefill', 'MovRadicadosController@buscarp')->name('pacientefill')->middleware('superEditor');
 
-/* RUTAS DE DOCUMENTOS CONSECUTIVOS */
-Route::get('documentos_consecutivo', 'DefDocumentosConsecutivoController@index')->name('documentos_consecutivo')->middleware('superEditor');
-Route::get('documentos_consecutivo/crear', 'DefDocumentosConsecutivoController@crear')->name('crear_doc_conse')->middleware('superEditor');
-Route::post('documentos_consecutivo', 'DefDocumentosConsecutivoController@guardar')->name('guardar_doc_conse')->middleware('superEditor');
-Route::get('documentos_consecutivo/{id}/editar', 'DefDocumentosConsecutivoController@editar')->name('editar_doc_conse')->middleware('superEditor');
-Route::put('documentos_consecutivo/{id}', 'DefDocumentosConsecutivoController@actualizar')->name('actualizar_doc_conse')->middleware('superEditor');
-Route::post('documento_conse_estado', 'DefDocumentosConsecutivoController@updateestado')->name('documento_conse_estado')->middleware('superEditor');
-Route::get('documento', 'DefDocumentosConsecutivoController@selectdoc')->name('documento')->middleware('superEditor');
-
-/* RUTAS DEL CITA */
-Route::get('cita', 'CitaController@index')->name('cita')->middleware('superEditor');
-Route::get('cita/crear', 'CitaController@crear')->name('crear_cita')->middleware('superEditor');
-Route::post('cita', 'CitaController@guardar')->name('guardar_cita')->middleware('superEditor');
-Route::get('cita/{id}/editar', 'CitaController@editar')->name('editar_cita')->middleware('superEditor');
-Route::put('cita/{id}', 'CitaController@actualizar')->name('actualizar_cita')->middleware('superEditor');
-Route::get('pacienteselect', 'CitaController@selectp')->name('selectp')->middleware('superEditor');
-
-/* RUTAS DE LA FACTURA */
-Route::get('facturacion', 'FacturaController@index')->name('facturacion')->middleware('superEditor');
-Route::get('facturacion/crear', 'FacturaController@crear')->name('crear_factura')->middleware('superEditor');
-Route::post('facturacion', 'FacturaController@guardar')->name('guardar_factura')->middleware('superEditor');
-Route::get('facturacion/{id}/editar', 'FacturaController@editar')->name('editar_factura')->middleware('superEditor');
-Route::put('facturacion/{id}', 'FacturaController@actualizar')->name('actualizar_factura')->middleware('superEditor');
-Route::get('pacientefact', 'FacturaController@selectpa')->name('pacientefact')->middleware('superEditor');
-Route::get('pacientefill', 'FacturaController@buscarp')->name('pacientefill')->middleware('superEditor');
-
-
-/* RUTAS DE LA HISTORIA */
-Route::get('paciente-pro', 'HistoriaController@indexpaciente')->name('cita-paciente')->middleware('superEditor');
-Route::get('historia', 'HistoriaController@index')->name('historia')->middleware('superEditor');
-Route::get('historiaana', 'HistoriaController@indexana')->name('historiaana')->middleware('superEditor');
-Route::get('historia/crear', 'HistoriaController@crear')->name('crear_historia')->middleware('superEditor');
-Route::post('historia', 'HistoriaController@guardar')->name('guardar_historia')->middleware('superEditor');
-Route::get('historia/{id}/editar', 'HistoriaController@editar')->name('editar_historia')->middleware('superEditor');
-Route::put('historiaanalisis/{id}', 'HistoriaController@insertaranalisis')->name('insertaranalisis_historia')->middleware('superEditor');
-Route::put('historia/{id}', 'HistoriaController@actualizar')->name('actualizar_historia')->middleware('superEditor');
-Route::get('pacienteselect', 'HistoriaController@selectp')->name('selectp')->middleware('superEditor');
-Route::get('pacienteprogramado/{id}/editar', 'HistoriaController@editarp')->name('pacienteh')->middleware('superEditor');
-Route::get('cie10d', 'HistoriaController@selectc')->name('cie10d')->middleware('superEditor');
-Route::get('cups', 'HistoriaController@selectcups')->name('cups')->middleware('superEditor');
-Route::get('cums', 'HistoriaController@selectcumsindexpdf')->name('cums')->middleware('superEditor');
-Route::get('via', 'HistoriaController@selectvia')->name('via')->middleware('superEditor');
 
 //Ruta para imprimir historias
 Route::get('historiapdf', 'HistoriaController@indexpdf')->name('historiapdf')->middleware('superEditor');
@@ -258,11 +173,6 @@ Route::get('eps_niveles/{id}/editarn', 'EpsController@editarn')->name('niveles_e
 Route::post('eps_niveles', 'EpsController@guardarnivel')->name('agregarnivel_eps_empresas')->middleware('superEditor');
 Route::put('eps_niveles/{id}', 'EpsController@actualizar')->name('actualizarnivel_eps_empresas')->middleware('superEditor');
 
-/* RUTAS DEL DIAGNOSTICO */
-Route::get('diagnostico', 'DiagnosticoController@index')->name('diagnostico')->middleware('superEditor');
-Route::post('diagnostico', 'DiagnosticoController@guardar')->name('guardar_diagnostico')->middleware('superEditor');
-Route::get('diagnostico/{id}/editar', 'DiagnosticoController@editar')->name('editar_diagnostico')->middleware('superEditor');
-Route::put('diagnostico/{id}', 'DiagnosticoController@eliminar')->name('eliminar_diagnostico')->middleware('superEditor');
 
 /* RUTAS DEL PLAN TERAPEUTICO */
 Route::get('terapeutico', 'PlanterapeuticoController@index')->name('terapeutico')->middleware('superEditor');
@@ -307,27 +217,6 @@ Route::get('prestamo/{id}', 'prestamoController@detalle')->name('detalle_prestam
 Route::put('prestamo/{id}', 'prestamoController@actualizar')->name('actualizar_prestamo')->middleware('superConsultor');
 
 Route::post('detalle_prestamo', 'DetallePrestamoController@update')->name('actualizar_cuota_fecha')->middleware('superConsultor');
-
-/* RUTAS DEL PAGO */
-
-//Route::get('pagos', 'pagoController@index1')->name('pago1')->middleware('superConsultor');
-Route::get('pago/{id}', 'pagoController@detalle')->name('detalle_pago')->middleware('superConsultor');
-Route::get('pago-info', 'pagoController@detallepagos')->name('detalle_pagos')->middleware('superConsultor');
-Route::get('pagos', 'pagoController@index')->name('pago')->middleware('superConsultor');
-Route::get('idcuotas', 'pagoController@index')->name('idcuotas')->middleware('superConsultor');
-Route::get('pago/crear', 'pagoController@crear')->name('crear_pago')->middleware('superConsultor');
-Route::post('pago', 'pagoController@guardar')->name('guardar_pago')->middleware('superConsultor');
-Route::get('pago/{id}/editar', 'pagoController@editar')->name('editar_pago')->middleware('superConsultor');
-Route::get('pago/{id}/editpay', 'pagoController@editpay')->name('editpay_pago')->middleware('superConsultor');
-Route::put('pago/{id}', 'pagoController@actualizar')->name('actualizar_pago')->middleware('superConsultor');
-
-
-/* RUTAS DEL GASTO */
-Route::get('gasto', 'gastoController@index')->name('gasto')->middleware('superEditor');
-Route::get('gasto/crear', 'gastoController@crear')->name('crear_gasto')->middleware('superEditor');
-Route::post('gasto', 'gastoController@guardar')->name('guardar_gasto')->middleware('superEditor');
-Route::get('gasto/{id}/editar', 'gastoController@editar')->name('editar_gasto')->middleware('superEditor');
-Route::put('gasto/{id}', 'gastoController@actualizar')->name('actualizar_gasto')->middleware('superEditor');
 
 
 /* RUTAS DEL USUARIO NO ADMIN PARA CONTRASEÑA */
